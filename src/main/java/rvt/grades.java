@@ -15,7 +15,7 @@ public class grades {
             System.out.println("failed");
         } else if(points <=59) {
             System.out.println("1");
-        } else if(points <=59) {
+        } else if(points <=69) {
             System.out.println("2");
         } else if(points <=79) {
             System.out.println("3");
