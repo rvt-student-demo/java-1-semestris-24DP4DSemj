@@ -49,23 +49,31 @@ System.out.println(list.size());
 
 }
 public static void OnTheList() {
-Scanner scanner = new Scanner(System.in);
+    Scanner scanner = new Scanner(System.in);
+    ArrayList<String> list = new ArrayList<>();
 
-ArrayList list = new ArrayList<>();
+    while (true) {
+        String input = scanner.nextLine();
+        if (input.isEmpty()) {
+            break;
+        }
+        list.add(input);
+    }
 
-while(true) {
+    System.out.print("Search for? ");
+    String searched = scanner.nextLine();
 
-System.out.println("Ievadi vardu (Ieavadi ' ' to leave)");
-String name = scanner.nextLine();
-
-if(name == " "){
-break;
+    if (list.contains(searched)) {
+        System.out.println(searched + " was found!");
+    } else {
+        System.out.println(searched + " was not found!");
+    }
 }
-list.add(name);
-
-}
-
-
-}
-
+public static void RemoveLast(ArrayList<String> strings) {
+    if (strings.isEmpty()) {
+            return;
+    }
+    int lastIndex = strings.size() - 1;
+    strings.remove(lastIndex);
+    }
 }
